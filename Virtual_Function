@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+class A
+{
+public:
+virtual void foo()
+{
+cout << "A" << endl;
+}
+};
+class D: public A
+{
+public:
+void foo()
+{
+cout << "B" << endl;
+}
+};
+int main()
+{
+A* ptrA;
+D d;
+ptrA = &d;
+ptrA->foo();
+}
