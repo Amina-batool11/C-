@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+class Teacher
+{ 
+ private:
+ void ID()
+  {
+    cout<<"99999"<<endl;
+  }
+  public:
+ void Experience()
+  {
+     cout << "20 years" << endl;
+  }
+  protected:
+  void Salary()
+  {
+  cout << "Salary is..." << endl;
+  }
+};
+class Student
+{
+  private:
+  void age()
+  {
+    cout << "age is...." << endl;
+  }
+  public:
+  void rollnumber()
+  {
+    cout << "roll number is..." << endl;
+  }
+  protected:
+  void address()
+  {
+  cout << "address is..." << endl;
+  }
+}; 
+int main()
+{
+Student s;
+Teacher t;
+t.Experience();
+s.rollnumber();
+}
