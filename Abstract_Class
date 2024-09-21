@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std ;
+class BGNU
+{
+public:
+int f=10000;
+int m=60;
+void fee()
+{
+cout<<"fee is="<<f;
+}
+void merit()
+{
+cout << "merit is=" <<m<< endl;
+}
+virtual void sports () =0;
+virtual void transport ()=0;
+virtual void scholarship ()=0;
+};
+class CSIT: public BGNU
+
+{
+public:
+void sports () override
+{
+cout << "sports for CSIT" << endl;
+}
+ void transport () override
+{
+cout << "transport for CSIT" << endl;
+}
+};
+class course:public CSIT
+{
+public:
+
+void scholarship () override
+{
+cout << "scholarship for CSIT courses" << endl;
+}
+
+};
+int main()
+{
+course obj;
+obj.scholarship();
+obj.transport ();
+obj.sports ();
+obj.merit();
+obj.fee();
+}
