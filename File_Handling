@@ -1,0 +1,19 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+int main()
+{
+ ofstream inputfile("Anabia.txt");
+if(inputfile.is_open())
+{ 
+inputfile << " hi! myself Amina.";
+inputfile<<" m currently a BSIT student at Baba Guru Nanak University." ;
+inputfile.close();
+cout << " file is successfully created" << endl;
+}
+else 
+{
+ cout << " something wrong with the file." << endl;
+}
+}
