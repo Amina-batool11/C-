@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+class Animal
+{
+private:
+void Eat()
+{
+cout<<"eating"<<endl;
+}
+public:
+
+void Sleep()
+{
+cout<<"sleeping"<<endl;
+}
+protected:
+
+void Run()
+{
+cout << "running" << endl;
+}
+};
+class Dog:protected Animal
+{
+protected:
+void Bark()
+{
+cout << "Barking" << endl;
+}
+public:
+void Cut()
+{
+cout << "cutting" << endl;
+}
+};
+int main()
+{ 
+Animal a;
+Dog d;
+a.Run();
+d.Cut();
+}
