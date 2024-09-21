@@ -1,0 +1,72 @@
+#include<iostream>
+using namespace std;
+class Teacher
+{ public:
+void ID(){
+cout << "ID is..." << endl;
+
+}
+  private:
+ void Experience()
+  {
+     cout << "Experience is..." << endl;
+  }
+ 
+  protected:
+  void salary ()
+  {
+  cout << "salary is..." << endl;}
+};
+class CR
+{
+  public:
+  void call(){
+  cout << "call student" << endl;
+  }
+  void convey()
+  {
+    cout << "convey sms" << endl;
+  }
+}; 
+class GR
+{
+ public:
+  void forward ()
+  {
+  cout << "forward sms" << endl;
+  }
+  void age()
+  {
+    cout << "age is " << endl;
+  }
+
+};
+class Student: public Teacher,public GR
+{
+public:
+void address ()
+{
+cout << "address is..." << endl;}
+void rollnumber ()
+{
+cout << "roll number is..." << endl;}
+void name()
+{
+cout << "name is" << endl;
+}
+};
+int main()
+{
+Student s;
+Teacher t;
+CR c;
+GR g;
+s.age();
+s.ID();
+s.forward();
+s.address();
+c.call();
+g.age();
+t.ID();
+
+}
