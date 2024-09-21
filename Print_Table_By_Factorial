@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int n;
+int c=1;
+cout << "enter a number" ;
+cin>>n;
+while(c<=10)
+{
+cout<<n<<"*"<<c<<"="<<n*c<<endl;
+c=c+1;
+}
+}
