@@ -1,0 +1,116 @@
+#include<iostream>
+using namespace std;
+class Teacher
+{ 
+ private:
+ void ID()
+  {
+    cout<<"99999"<<endl;
+  }
+  public:
+ void Experience()
+  {
+     cout << "20 years" << endl;
+  }
+  protected:
+  void Salary()
+  {
+  cout << "Salary is..." << endl;
+  }
+};
+class Student: public Teacher 
+{
+  private:
+  void age()
+  {
+    cout << "age is...." << endl;
+  }
+  public:
+  void rollnumber()
+  {
+    cout << "roll number is..." << endl;
+  }
+  protected:
+  void address()
+  {
+  cout << "address is..." << endl;
+  }
+}; 
+class me: public Student
+{
+private:
+void CNIC()
+{
+cout << "CNIC Num..." << endl;
+}
+public:
+void Marks()
+{
+cout << "Marks are..." << endl;
+
+address ();
+}
+};
+int main()
+{
+Student s;
+Teacher t;
+me m;
+t.Experience();
+
+m.rollnumber();
+s.rollnumber();
+m.Marks();
+}
+#include<iostream>
+using namespace std;
+class Teacher
+{ 
+  public:
+ void Experience()
+  {
+     cout << "Experience is..." << endl;
+  }
+  void age()
+  {
+  cout << "Age is 50" << endl;
+  }
+  protected:
+  void IQLevel()
+  {
+  cout << "IQ Level is 100.." << endl;}
+};
+class Student: public Teacher 
+{
+  public:
+  void Experience(){
+  cout << "Experience is 20" << endl;
+  }
+  void age()
+  {
+    cout << "age is 30" << endl;
+  }
+}; 
+class me: public Student
+{
+ public:
+  void Experience()
+  {
+  cout << "Experience is 10" << endl;
+  }
+  void age()
+  {
+    cout << "age is 20" << endl;
+  }
+
+};
+int main()
+{
+Student s;
+Teacher t;
+me m;
+t.age();
+s.age();
+m.age();
+m.Experience();
+}
