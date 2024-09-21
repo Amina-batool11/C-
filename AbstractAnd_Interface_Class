@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class Employee 
+{public:
+virtual void calculatesalary ()=0;
+
+};
+class FullTimeEmployee:public Employee
+{
+	public:
+	void calculatesalary() override
+	{
+	cout<<"Salary is calculatd"<<endl;
+}
+};
+class PartTimeEmployee:public Employee
+{public:
+	void calculatesalary() override
+	{
+		cout<<"Salary is 20,000"<<endl;
+	}
+};
+int main()
+{ 
+FullTimeEmployee obj1;
+PartTimeEmployee obj2;
+obj1.calculatesalary();
+obj2.calculatesalary();
+}
