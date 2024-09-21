@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+class Shape
+{
+public:
+virtual double calculateArea()=0;
+};
+class Square:public Shape
+{
+private:
+double LengthSide;
+	public:
+    Square (double Side): LengthSide(Side)
+    { } //making constructor 
+	double calculateArea() override
+ {
+  return LengthSide* LengthSide;
+ }
+};
+class Triangle:public Shape
+{
+private:
+double base;
+double height;
+public:
+Triangle(double b, double h):base(b), height (h)
+{ } //making constructor
+	double calculateArea() override
+  {  return 0.5* base * height;}
+  };
+int main()
+{
+Square mySquare(2.5);
+Triangle myTrianle(5.4,4.4);
+Shape* s[2];
+s[0]=&mySquare;
+s[1]=&myTrianle;
+for(int i=0; i<2; i++)
+{
+cout << "Area of shapes "<<i+1 <<"= "<<s[i]->calculateArea()<<endl; 
+}
+return 0;
+}
