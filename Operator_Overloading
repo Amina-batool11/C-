@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+class A
+{
+public:
+int value;
+int operator - (int num)
+{
+return value * num;
+}
+};
+int main()
+{
+A a;
+a.value=10;
+int result =a-2;
+cout<<result<<endl;
+return 0;
+}
