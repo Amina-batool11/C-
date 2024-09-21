@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+class Parent 
+{
+private:
+int c;
+public:
+int a;
+protected:
+int b;
+};
+class Child:private Parent
+{
+public:
+void in ()
+{
+cout << "enter a:" << endl;
+cin>>a;
+cout<<"enter b"<<endl;
+cin>>b;
+}
+void out()
+{
+cout << "a=" <<a<< endl;
+cout << "b=" <<b<< endl;
+}
+};
+int main()
+{
+Child obj;
+obj.in();
+obj.out();
+}
