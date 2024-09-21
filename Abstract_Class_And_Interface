@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+class Vehicle
+{
+public:
+virtual int getNumberOfWheels ()=0;
+};
+class Car:public Vehicle
+{
+	public:
+	int getNumberOfWheels() override{
+ return 4;}
+};
+class Bike:public Vehicle
+{
+public:
+	int getNumberOfWheels() override
+  {  return 2;}
+};
+int main()
+{
+Car c;
+Bike b;
+Vehicle* v[2];
+v[0]=&c;
+v[1]=&b;
+for(int i=0; i<2; i++)
+{
+cout << "vehicle "<<i+1 <<"has "<<v[i]->getNumberOfWheels()<<"wheels" <<endl;
+}
+return 0;
+}
